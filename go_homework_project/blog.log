@@ -1,0 +1,66 @@
+blog log：2025/08/21 19:56:19 无法加载配置：无法打开配置文件 %!d(string=config.yaml)：open config.yaml: The system cannot find the file specified.
+blog log：2025/08/21 19:57:01 无法加载配置：无法打开配置文件 %!d(string=/task_04/config.yaml)：open /task_04/config.yaml: The system cannot find the path specified.
+blog log：2025/08/21 19:57:50 无法加载配置：无法打开配置文件 %!d(string=go_homework_project/task_04/config.yaml)：open go_homework_project/task_04/config.yaml: The system cannot find the path specified.
+blog log：2025/08/21 20:00:05 无法加载配置：无法打开配置文件 %!d(string=config.yaml)：open config.yaml: The system cannot find the file specified.
+blog log：2025/08/21 20:02:08 无法加载配置：无法打开配置文件 %!d(string=./config.yaml)：open ./config.yaml: The system cannot find the file specified.
+blog log：2025/08/21 20:04:40 无法加载配置：无法打开配置文件 %!d(string=C:\Users\HP\AppData\Local\JetBrains\GoLand2025.2\tmp\GoLand\task_04\config.yaml)：open C:\Users\HP\AppData\Local\JetBrains\GoLand2025.2\tmp\GoLand\task_04\config.yaml: The system cannot find the path specified.
+blog log：2025/08/21 20:08:33 数据库连接成功
+blog log：2025/08/21 20:10:41 数据库连接字符串:root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 20:10:41 数据库连接成功
+blog log：2025/08/21 20:59:24 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 20:59:24 数据库连接成功
+blog log：2025/08/21 21:04:21 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:04:21 数据库连接成功
+blog log：2025/08/21 21:04:21 BlogDB 未初始化
+blog log：2025/08/21 21:05:38 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:06:06 数据库连接成功
+blog log：2025/08/21 21:06:21 BlogDB 未初始化
+blog log：2025/08/21 21:09:05 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:09:09 数据库连接成功
+blog log：2025/08/21 21:09:13 表创建成功
+blog log：2025/08/21 21:50:09 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:50:09 数据库连接成功
+blog log：2025/08/21 21:50:09 启动失败：%!(EXTRA *net.OpError=listen tcp: address 8080: missing port in address)
+blog log：2025/08/21 21:51:48 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:51:48 数据库连接成功
+blog log：2025/08/21 21:52:11 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:52:11 数据库连接成功
+blog log：2025/08/21 21:54:36 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:54:36 数据库连接成功
+blog log：2025/08/21 21:55:06 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/21 21:55:06 数据库连接成功
+blog log：2025/08/23 11:45:27 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:45:27 数据库连接成功
+blog log：2025/08/23 11:46:30 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:46:30 数据库连接成功
+blog log：2025/08/23 11:48:53 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:48:53 数据库连接成功
+blog log：2025/08/23 11:49:46 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:49:46 数据库连接成功
+blog log：2025/08/23 11:51:02 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:51:02 数据库连接成功
+blog log：2025/08/23 11:51:49 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 11:51:49 数据库连接成功
+blog log：2025/08/23 11:51:56 record not found
+blog log：2025/08/23 12:03:58 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 12:03:58 数据库连接成功
+blog log：2025/08/23 12:04:32 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 12:04:32 数据库连接成功
+blog log：2025/08/23 13:05:22 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 13:05:22 数据库连接成功
+blog log：2025/08/23 13:05:54 JWT_SECRET密钥： dd713b5fbb1f0f9bb0278c4cba22492e1e443ec1084856f150cad45ee2d3b10ac8e2b8ea58455dcee5fbdf79c670d0dbeb1c56a70ad3a9c4863817b49c74f491
+blog log：2025/08/23 13:06:31 JWT_SECRET密钥： 4e84a38ed81abb136a69636ffe9647aafb171b0e536be83a2b7bca5c55b1648182e73f050ebbc89bdc64d6843dd00f2496461eef47fa427bc0c4ad21f3966981
+blog log：2025/08/23 16:37:21 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 16:37:21 数据库连接成功
+blog log：2025/08/23 16:39:50 JWT_SECRET密钥： 54ba18d13da8a19fac3026dbfce9a856ca10242fac6dd036972842f72652e4dd1e915a8c79870b98c8cbba029ae7a31e3e5d20ce093969e0a69bcb4f5707e933
+blog log：2025/08/23 16:42:15 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 16:42:15 数据库连接成功
+blog log：2025/08/23 16:42:33 JWT_SECRET密钥： 1479f2c6b209e51b3971b346b3ecfb30099fa6824b6269258e75c030eaf61348a16a853d5dced108049ea1ad15406d2c1d36921d83fa7a73088421af2729d0d7
+blog log：2025/08/23 16:43:39 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 16:43:39 数据库连接成功
+blog log：2025/08/23 16:43:46 JWT_SECRET密钥： 47547db1985dfff19435346067e5170bd7f1bbe15e18bd6df81ddf99b55df0914039e99fe3ee72ce1cab56ea6639244754de8ef5ece8e3aa8af19bb403e42673
+blog log：2025/08/23 16:44:37 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/23 16:44:37 数据库连接成功
+blog log：2025/08/23 16:44:39 JWT_SECRET密钥： b5f9c8cb7db2d39456c8d8638779860561ef8058820f7cd7e0eaf8bb9b828c0e61377cb8a782afcb12e9a4783de894cbb6a62b1c30725b85236aa51c94e4b045
+blog log：2025/08/24 16:40:04 数据库连接字符串：root:root@tcp(127.0.0.1:3306)/go_blog?charset=utf8mb4&parseTime=True&loc=Local
+blog log：2025/08/24 16:40:04 数据库连接成功
