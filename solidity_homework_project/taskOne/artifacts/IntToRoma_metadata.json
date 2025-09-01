@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "inputNum",
+						"type": "uint256"
+					}
+				],
+				"name": "intToRoma",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"4_IntToRoma.sol": "IntToRoma"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"4_IntToRoma.sol": {
+			"keccak256": "0xe05546fd8458a804170d7f5fd4d6edcbc9633a293dae7496a061ec57cd111c09",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bd379c7d7872717a87a06109a63e9301e9d0bc5e22d7efcf7299c30ac771c9b2",
+				"dweb:/ipfs/QmVtENDUwCQeWNs9vUpFqfA4H3EHrxGejnocB9VvZemk5f"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,89 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "roma",
+						"type": "string"
+					}
+				],
+				"name": "romaToInt",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes1",
+						"name": "",
+						"type": "bytes1"
+					}
+				],
+				"name": "romaToIntMap",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"3_RomaToInt.sol": "RomaToInt"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"3_RomaToInt.sol": {
+			"keccak256": "0xde53cf283332557719a2a5b4525d239d8e191af7ef061fd5c7d1bbd2029eaa41",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f7e62258507efe7a821d7c10456bc4e2007b6c3b930aa788cdc4de7c1dea9525",
+				"dweb:/ipfs/QmSKzLRzmkXxjMxCD8oqYP7e6Q2m97jxgXAEjfCvgAZpsA"
+			]
+		}
+	},
+	"version": 1
+}
