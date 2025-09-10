@@ -40,6 +40,10 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 图片地址：https://ipfs.io/ipfs/bafybeiejsaitzilbhhcwe7hmu6ud7vcah4hjf3dhluozkjfafnhjwntvnq/MyNFT1.JPG
 合约创建测试区块链地址：https://sepolia.etherscan.io/tx/0xa12ba61284a90b0b3aed40095cab6bbea7a4c6a3767712b9976d1c8db836e5e2
 铸币测试区块链地址：https://sepolia.etherscan.io/tx/0x3b1653f267a1c112991a812fd7aac3e8119cfcf049f25966664be93965845cb9
+
+mintNFT函数入参：
+recipient：0x6171b3e8644Fb824FfC00CC8E099b7Ce1c3B9C8B
+tokenURI：ipfs://bafybeifeph7vunjrmwioeqgiuboreolvuzm2sbw2vdupiexvplwkv4v3dy/MyNFT1.json
 */
 
 
