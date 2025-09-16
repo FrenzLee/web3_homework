@@ -1,0 +1,11 @@
+{
+  "network": "localhost",
+  "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "timestamp": "2025-09-15T03:47:26.951Z",
+  "contracts": {
+    "MyAuctionImpl": "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e",
+    "MyAuctionFactory": "0xA51c1fc2f0D1a1b8494Ed1FE312d7C3a78Ed91C0",
+    "auctionImplInFactory": "0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e"
+  },
+  "rpcUrl": "http://127.0.0.1:8545"
+}
