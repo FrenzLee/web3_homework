@@ -199,11 +199,6 @@ contract MyAuction is Initializable, UUPSUpgradeable, OwnableUpgradeable, Reentr
         emit HighestBidIncreased(msg.sender, auctionInfo.tokenId, address(0), msg.value);
     } 
 
-    //测试ERC20代币转移
-    function testTransferErc20(address payTokenAddress, uint256 amount, address from) external {
-        
-        IERC20(payTokenAddress).safeTransferFrom(from, address(this), amount);
-    }
 
     //拍卖，使用ERC20代币
     function bidByToken(address payTokenAddress, uint256 amount) external nonReentrant onlyBeforeEnd { 
@@ -266,23 +261,6 @@ contract MyAuction is Initializable, UUPSUpgradeable, OwnableUpgradeable, Reentr
 
     }
 
-    function endAuctionEarly() external { 
-        require(auctionInfo.seller == msg.sender, "Only seller can end early");
-        require(!auctionInfo.isEnd, "Auction has already ended");
-        //修改状态
-        auctionInfo.isEnd = true;
-
-        //触发时间
-        emit AuctionEnded(
-            auctionInfo.seller, 
-            auctionInfo.nftAddress, 
-            auctionInfo.tokenId,
-            auctionInfo.highestBidder,
-            auctionInfo.highestPrice,
-            auctionInfo.highestTokenAddress
-        );
-
-    }
 
     //拍卖结束后，NFT 转移给出价最高者，应该由出价最高者调用，
     //但是其他人也可调用，不过不管谁调用，NFT最终也只是转给highestBidder

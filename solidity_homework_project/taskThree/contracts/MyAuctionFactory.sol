@@ -5,8 +5,13 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol";
 import "./MyAuction.sol"; 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
+import "@openzeppelin/contracts/utils/Create2.sol";
 
 contract MyAuctionFactory is Ownable {
+
+    //用于生成预计算代理合约地址
+    using Create2 for bytes32;
+
     // 当前拍卖逻辑合约的实现地址
     address public auctionImplementation;
     // 实现版本号
@@ -56,9 +61,6 @@ contract MyAuctionFactory is Ownable {
         require(_startPrice > 0, "Start price must be greater than zero");
         require(_duration > 0, "Duration must be greater than zero");
         require(auctionsMap[_nftAddress][_tokenId] == address(0), "Auction already exists for this NFT");
-        
-        //卖家NFT转给合约工厂
-        IERC721(_nftAddress).transferFrom(msg.sender, address(this), _tokenId);
 
         //构建 initialize 函数调用数据
         bytes memory initData = abi.encodeWithSelector(
@@ -71,11 +73,20 @@ contract MyAuctionFactory is Ownable {
             _startTokenAddress
         );
 
-        //创建代理合约
-        auctionProxy = address(new ERC1967Proxy(auctionImplementation, initData));
+        //卖家创建拍卖时，不需要将NFT转给代理合约，只需要授权，需要先将NFT授权给预计算的代理合约
+        //获取预计算代理合约
+        //使用 CREATE2 计算唯一地址（salt 基于 nft + tokenId）
+        bytes32 salt = keccak256(abi.encode(_nftAddress, _tokenId));
+        //使用 CREATE2 部署合约
+        auctionProxy = Create2.deploy(
+            0, // 无附加 ETH
+            salt,
+            abi.encodePacked(type(ERC1967Proxy).creationCode, abi.encode(auctionImplementation, initData))
+        );
 
-        //将NFT转给代理合约
-        IERC721(_nftAddress).transferFrom(address(this), auctionProxy, _tokenId);
+        // 检查是否已授权
+        address currentApproved = IERC721(_nftAddress).getApproved(_tokenId);
+        require(currentApproved == auctionProxy, "NFT must be approved for the auction proxy");
 
         //记录信息
         auctionsMap[_nftAddress][_tokenId] = auctionProxy;
@@ -84,8 +95,40 @@ contract MyAuctionFactory is Ownable {
         emit AuctionDeployed(msg.sender, auctionProxy, _nftAddress, _tokenId);
     }
 
+    //预计算代理合约地址
+    function predictAuctionAddress(
+        address _seller,
+        address _nftAddress, 
+        uint256 _tokenId, 
+        uint256 _startPrice,
+        uint256 _duration,
+        address _startTokenAddress
+    ) public view returns (address) {
+        bytes memory initData = abi.encodeWithSelector(
+            MyAuction.initialize.selector,
+            _seller,
+            _nftAddress,
+            _tokenId,
+            _startPrice, 
+            _duration, 
+            _startTokenAddress
+        );
+
+        bytes memory initCode = abi.encodePacked(
+            type(ERC1967Proxy).creationCode, 
+            abi.encode(auctionImplementation, initData)
+        );
+
+        bytes32 salt = keccak256(abi.encode(_nftAddress, _tokenId));
+
+        address pAuctionAddress = Create2.computeAddress(salt, keccak256(initCode));
+
+        return pAuctionAddress;
+    }
+
+
     //获取所有已创建的拍卖合约地址
-    function getAuctions() external view returns (address[] memory) {
+    function getAllAuctions() external view returns (address[] memory) {
         return allAuctions;
     }
 

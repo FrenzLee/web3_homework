@@ -1,6 +1,7 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("@openzeppelin/hardhat-upgrades");
 require("dotenv").config();
+require("solidity-coverage");
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -11,6 +12,7 @@ module.exports = {
         enabled: true,
         runs: 200
       },
+      viaIR: true, // 关键：启用 IR 编译流程，缓解栈过深
     },
   },
   networks: {

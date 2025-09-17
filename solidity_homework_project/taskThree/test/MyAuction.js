@@ -1,7 +1,7 @@
 const { ethers, upgrades } = require("hardhat");
 const { expect } = require("chai");
 
-describe("Auction Test", function () { 
+describe("MyAuction Test", function () { 
     let auctionProxy;
     let mynft, myerc20;
     let ethToUsdPriceFeed, erc20ToUsdPriceFeed; 
@@ -61,9 +61,13 @@ describe("Auction Test", function () {
             const [ ,erc20ToUsdPrice ] = await erc20ToUsdPriceFeed.latestRoundData();
             expect(await ethToUsdPriceFeed.owner()).to.equal(owner.address);
             expect(await ethToUsdPriceFeed.decimals()).to.equal(8);
+            expect(await ethToUsdPriceFeed.description()).to.equal("EthToUsdPriceFeed");
+            expect(await ethToUsdPriceFeed.version()).to.equal(1);
             expect(ethToUsdPrice).to.equal(ETH_PRICE);
             expect(await erc20ToUsdPriceFeed.owner()).to.equal(owner.address);
             expect(await erc20ToUsdPriceFeed.decimals()).to.equal(8);
+            expect(await erc20ToUsdPriceFeed.description()).to.equal("Erc20ToUsdPriceFeed");
+            expect(await erc20ToUsdPriceFeed.version()).to.equal(1);
             expect(erc20ToUsdPrice).to.equal(ERC20_PRICE);            
         });
     });
