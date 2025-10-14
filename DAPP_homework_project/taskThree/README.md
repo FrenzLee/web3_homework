@@ -69,7 +69,9 @@ github.com/blocto/solana-go-sdk 和 github.com/gagliardetto/solana-go 是两个�
 | **是否支持 WASM** | ✅ 支持编译为 WASM（前端可用） | ❌ 不支持 WASM |
 | **社区活跃度** | 中等 | 非常高（GitHub Star 超 1.5k，广泛引用） |
 | **License** | MIT | MIT |
+
 如何选择？
+
 | 你的需求 | 推荐 SDK |
 |--------|---------|
 | 快速开发 DApp、钱包、后端服务 | ✅ `blocto/solana-go-sdk` |
