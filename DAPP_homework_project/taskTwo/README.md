@@ -77,7 +77,7 @@ Geth（Go-Ethereum）的架构由多个核心模块组成，这些模块协同�
 
 **（2）交易池管理与 Gas 机制**
 
-+ **模块：**core/tx_pool.go
++ **模块**：core/tx_pool.go
 + **核心功能**
     - **交易存储**：维护一个内存中的交易池（Pending + Queued），存储待处理的交易。
     - **交易验证**：
@@ -96,7 +96,7 @@ Geth（Go-Ethereum）的架构由多个核心模块组成，这些模块协同�
 
 **（3）EVM 执行环境构建**
 
-+ **模块：**core/vm/ 和 core/
++ **模块**：core/vm/ 和 core/
 + **核心功能**
     - **EVM（Ethereum Virtual Machine）**：Geth 实现了以太坊虚拟机，用于执行智能合约字节码。
     - **状态管理**：通过 **MPT（Merkle Patricia Trie）** 维护账户状态、存储、收据等，确保状态可验证。
