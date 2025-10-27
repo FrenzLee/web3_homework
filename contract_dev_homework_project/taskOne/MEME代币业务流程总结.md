@@ -2,7 +2,7 @@
 ### 阶段1：项目方部署和初始化
 **1、部署`memetoken`合约**
 
-+ 项目方(Owner)通过部署脚本，将合约部署到链上，得到LMEME** 代币合约地址**（例如：`0x123...abc`）。
++ 项目方(Owner)通过部署脚本，将合约部署到链上，得到LMEME**代币合约地址**（例如：`0x123...abc`）。
 + 构造函数执行：
     - 铸造 `1000LMEME` 到 `owner()` 钱包。
     - 设置 `marketingWallet = owner()`，`liquidityWallet = owner()`。
