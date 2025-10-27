@@ -169,7 +169,7 @@ ERC20.transfer() 内部调用 _update(from, to, value)
 
 + 用户买入 LMEME代币，用户用 ETH 换取 LMEME，触发 **5%的买入税**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761478010908-1d57babb-5455-4491-a9b5-bbcf794b5e4d.png)
+![](contract_dev_homework_project/taskOne/pic/buy.JPG)
 
 + **资产流动总结（买入，用户支付了 ETH，但税收是通过减少其获得的 LMEME 数量实现的）**
 
