@@ -1,14 +1,14 @@
 ## 一、流程整理
 ### 阶段1：项目方部署和初始化
-**1、部署**`**memetoken**`** 合约**
+**1、部署`memetoken`合约**
 
-+ 项目方(Owner)通过部署脚本，将合约部署到链上，得到LMEME** 代币合约地址**（例如：`0x123...abc`）。
++ 项目方(Owner)通过部署脚本，将合约部署到链上，得到LMEME**代币合约地址**（例如：`0x123...abc`）。
 + 构造函数执行：
     - 铸造 `1000LMEME` 到 `owner()` 钱包。
     - 设置 `marketingWallet = owner()`，`liquidityWallet = owner()`。
     - 设置免税地址：`owner()`、`this`、`uniswapV2Router`（占位，还未设置）。
 
-**2、调用 **`**createPair(routerAddress)**`
+**2、调用`createPair(routerAddress)`**
 
 + 项目方调用：`memetoken.createPair(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);`
 + 合约内部：
@@ -74,13 +74,13 @@ router.swapExactETHForTokens{value: 1 ether}(
 + 用户的 1 ETH 被封装为 1 WETH，并**存入池中**。
 + Router 调用 `LMEME/WETH Pair` 合约进行 swap。
 + Pair 合约需要**从池中**划转LMEME 给用户。
-+ 因此，Pair 合约调用：`memetoken.transfer(userAddress, amountOut);``**transfer**`** 是 ERC20 标准函数，它内部会调用 **`**_update(from, to, value)**`
-+ **触发 memetoken**** 合约的 **`**_update()**`** 函数**：
++ 因此，Pair 合约调用：`memetoken.transfer(userAddress, amountOut);`**`transfer`** 是 ERC20 标准函数，它内部会调用 **`_update(from, to, value)`**
++ **触发 memetoken** 合约的 **`_update()`函数**：
     - `from = uniswapV2Pair`（因为是 Pair 发出LMEME）
     - `to = userAddress`
     - `value = amountOut`
 + 根据 memetoken 合约的代币税逻辑，此次操作为买入，税率为5%
-+ `**_update()**`** 内部执行**：
++ **`_update()`内部执行**：
     - 计算税费：`fee = value * 5 / 100`
     - 实际到账：`amountToTransfer = value - fee`
     - 调用 `super._update(from, to, amountToTransfer)` → 用户收到净额LMEME
@@ -111,12 +111,12 @@ router.swapExactTokensForETH(
 
 + Router 从用户钱包扣除 100LMEME。
 + 调用 `memetoken.transfer(uniswapV2Pair, 100e18)`
-+ **触发 memetoken**** 合约的 **`**_update()**`** 函数**：
++ **触发 memetoken** 合约的 **`_update()`函数**：
     - `from = userAddress`
     - `to = uniswapV2Pair`
     - `value = 100`
 + 根据 memetoken 合约的代币税逻辑，此次操作为卖出，税率为8%
-+ `**update()**`** 内部执行**：
++ **`update()`内部执行**：
     - 检查冷却时间（如果是普通用户，且非免税）
     - 计算税费：`8% of 100LMEME = 8LMEME`
     - 用户实际转出 100LMEME：
