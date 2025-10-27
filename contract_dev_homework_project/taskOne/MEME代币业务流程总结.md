@@ -167,7 +167,7 @@ ERC20.transfer() 内部调用 _update(from, to, value)
 
 **（2）流程图**
 
-+ 用户买入 LMEME代币，用户用 ETH 换取 LMEME，触发 **5%的买入税**
++ - 用户买入 LMEME代币，用户用 ETH 换取 LMEME，触发 **5%的买入税**
 
 ![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskOne/pic/buy.JPG)
 
@@ -181,9 +181,10 @@ ERC20.transfer() 内部调用 _update(from, to, value)
 
 
 
-+ 用户卖出 LMEME，用户用 LMEME 换取 ETH，触发 **8%卖出税**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761478484636-bd43a27b-1b87-4f40-8e08-96483f2f75de.png)
++ - 用户卖出 LMEME，用户用 LMEME 换取 ETH，触发 **8%卖出税**
+
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskOne/pic/sell.JPG)
 
 + **资产流动总结（卖出，所有资产变化在一个交易内原子完成）**
 
