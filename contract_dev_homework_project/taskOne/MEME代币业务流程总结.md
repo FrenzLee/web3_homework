@@ -1,6 +1,6 @@
 ## 一、流程整理
 ### 阶段1：项目方部署和初始化
-**1、部署**`memetoken`合约
+**1、部署`memetoken`合约**
 
 + 项目方(Owner)通过部署脚本，将合约部署到链上，得到LMEME** 代币合约地址**（例如：`0x123...abc`）。
 + 构造函数执行：
@@ -8,7 +8,7 @@
     - 设置 `marketingWallet = owner()`，`liquidityWallet = owner()`。
     - 设置免税地址：`owner()`、`this`、`uniswapV2Router`（占位，还未设置）。
 
-**2、调用 **`**createPair(routerAddress)**`
+**2、调用`createPair(routerAddress)`**
 
 + 项目方调用：`memetoken.createPair(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);`
 + 合约内部：
