@@ -536,21 +536,21 @@ function _safeMetaNodeTransfer(address _to, uint256 _amount) internal {
 
 ## 三、业务时序图
 ### 1、合约初始化
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761738827317-32711e83-3579-4274-a3bf-9892cf56d299.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E5%90%88%E7%BA%A6%E5%88%9D%E5%A7%8B%E5%8C%96.png)
 
 ### 2、管理员更新质押池权重
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761738879389-f01ac110-3420-48ed-adf2-c690a4adaec4.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E7%AE%A1%E7%90%86%E5%91%98%E6%9B%B4%E6%96%B0%E8%B4%A8%E6%8A%BC%E6%B1%A0%E6%9D%83%E9%87%8D.png)
 
 ### 3、用户质押 ETH
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761738963795-8039e1b8-b083-42f1-93a6-c692ccd00cce.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E7%94%A8%E6%88%B7%E8%B4%A8%E6%8A%BC%20ETH.png)
 
 ### 4、用户质押 ERC20 代币
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761738988983-0b7bc43a-8bd4-4f3a-8a46-eb0d2b0e0a27.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E7%94%A8%E6%88%B7%E8%B4%A8%E6%8A%BC%20ERC20%20%E4%BB%A3%E5%B8%81.png)
 
 ### 5、用户解质押与提现
-![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761739017327-04a837d4-cb76-48c0-9725-78521319cbd7.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E7%94%A8%E6%88%B7%E8%A7%A3%E8%B4%A8%E6%8A%BC%E4%B8%8E%E6%8F%90%E7%8E%B0.png)
 
 ### 6、用户领取奖励
-### ![](https://cdn.nlark.com/yuque/0/2025/png/40797156/1761739055120-b57d96be-0095-46a6-9d86-ce1d9b796467.png)
+![](https://github.com/FrenzLee/web3_homework/blob/master/contract_dev_homework_project/taskTwo/metanode-contract/pic/%E7%94%A8%E6%88%B7%E9%A2%86%E5%8F%96%E5%A5%96%E5%8A%B1.png)
 
 
